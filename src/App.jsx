@@ -355,25 +355,25 @@ useEffect(() => {
     };
 
 
-  const mintNft = () => {
-    setIsClaiming(true);
-     // Call bundleDropModule.claim("0", 1) to mint nft to user's wallet.
-     bundleDropModule
-     .claim("0", 1)
-     .catch((err) => {
-       console.error("failed to claim", err);
-       setIsClaiming(false);
-     })
-     .finally(() => {
-        // Stop loading state.
-        setIsClaiming(false);
-        // Set claim state.
-        setHasClaimedNFT(true);
-        // Show user their fancy new NFT!
-        console.log( `🌊 Successfully Minted! Check it out on OpenSea: https://testnets.opensea.io/assets/${bundleDropModule.address}/0`
-        );
-     });
-  }
+  // const mintNft = () => {
+  //   setIsClaiming(true);
+  //    // Call bundleDropModule.claim("0", 1) to mint nft to user's wallet.
+  //    bundleDropModule
+  //    .claim("0", 1)
+  //    .catch((err) => {
+  //      console.error("failed to claim", err);
+  //      setIsClaiming(false);
+  //    })
+  //    .finally(() => {
+  //       // Stop loading state.
+  //       setIsClaiming(false);
+  //       // Set claim state.
+  //       setHasClaimedNFT(true);
+  //       // Show user their fancy new NFT!
+  //       console.log( `🌊 Successfully Minted! Check it out on OpenSea: https://testnets.opensea.io/assets/${bundleDropModule.address}/0`
+  //       );
+  //    });
+  // }
   
   // This is the case where we have the user's address
   // which means they've connected their wallet to our site!
